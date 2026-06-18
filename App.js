@@ -174,7 +174,25 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('mouseup', () => { isDragging = false; });
     window.addEventListener('touchend', () => { isDragging = false; });
 
-    // Այս ֆունկցիաները հիմա կկանչվեն ճիշտ ժամանակին
+    // --- Ավելացված հատված. Նավիգացիոն մենյուի աշխատանքը հեռախոսի վրա ---
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+
+        // Փակել մենյուն, երբ որևէ հղման վրա սեղմում են
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('open');
+            });
+        });
+    }
+
     initHero();
     setupMap();
     loadTimeline(); 
