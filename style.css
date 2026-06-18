@@ -349,3 +349,30 @@ footer {
     color: #ffb703;
     font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        gap: 15px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; 
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .nav-links li {
+        margin: 5px 10px; 
+    }
+    
+    .hero-section {
+        padding: 60px 10px 20px 10px; 
+    }
+
+    #event-title {
+        font-size: 32px; 
+    }
+}
