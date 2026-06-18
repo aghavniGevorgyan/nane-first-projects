@@ -94,7 +94,6 @@ function setupMap() {
     }
 }
 
-// ՃԻՇՏ ԿԱՊՎԱԾ ԻՐԱԴԱՐՁՈՒԹՅՈՒՆՆԵՐԻ ԼՍՈՂԸ
 document.addEventListener('DOMContentLoaded', () => {
     const tablet = document.getElementById('tablet3d');
     
